@@ -10,13 +10,19 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex_start;
       height: 100vh;
-      margin: 0;
       background: #f0f0f0;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     .container {
+      margin: 0 auto;
       position: relative;
       width: 1000px;
       height: 3000px;
@@ -53,17 +59,25 @@
     }
 
     .controls {
-      margin-top: 20px;
-      text-align: center;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       width: min(90vw, 400px);
+       margin: 20px auto 0 auto; 
+       text-align: center;
+       box-sizing: border-box;
     }
 
     input[type="range"] {
-      width: 500px;
+      width: 80%
+      max-width: none;
     }
 
     #message {
       margin-top: 10px;
       font-weight: bold;
+      align-self: center;
     }
 
     button {
@@ -75,6 +89,7 @@
       color: white;
       border-radius: 5px;
       cursor: pointer;
+      align-self: center;
     }
 
     button:hover {
